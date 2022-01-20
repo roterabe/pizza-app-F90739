@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".CustomizePizzaDialog">
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="Cancel"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/subtotal_text_view"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/subtotal_text_view" />
+
+        <Button
+            android:id="@+id/add_to_cart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:text="Add to cart"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="@+id/subtotal_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/subtotal_text_view" />
+
+        <Button
+            android:id="@+id/plus"
+            android:layout_width="43dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="8dp"
+            android:text="+"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/quantity_text_view"
+            app:layout_constraintEnd_toEndOf="@+id/quantity"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toEndOf="@+id/quantity_text_view"
+            app:layout_constraintTop_toTopOf="@+id/quantity_text_view"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/quantity_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="1"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/quantity"
+            app:layout_constraintStart_toStartOf="@+id/quantity"
+            app:layout_constraintTop_toBottomOf="@+id/quantity" />
+
+        <Button
+            android:id="@+id/minus"
+            android:layout_width="43dp"
+            android:layout_height="39dp"
+            android:layout_marginEnd="8dp"
+            android:text="-"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="@+id/quantity_text_view"
+            app:layout_constraintEnd_toStartOf="@+id/quantity_text_view"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="@+id/quantity"
+            app:layout_constraintTop_toTopOf="@+id/quantity_text_view"
+            app:layout_constraintVertical_bias="0.5"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="136dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:text="Quantity"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/toppings_for_pizza"
+            app:layout_constraintStart_toStartOf="@+id/toppings_for_pizza"
+            app:layout_constraintTop_toBottomOf="@+id/toppings_for_pizza" />
+
+        <TextView
+            android:id="@+id/subtotal_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="subtotal: 0"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/quantity_text_view"
+            app:layout_constraintHorizontal_bias="0.481"
+            app:layout_constraintStart_toStartOf="@+id/quantity_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/quantity_text_view"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/extras"
+            android:layout_width="95dp"
+            android:layout_height="29dp"
+            android:layout_marginTop="32dp"
+            android:text="Extras:"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/toppings_for_pizza"
+            android:layout_width="135dp"
+            android:layout_height="156dp"
+            android:layout_marginTop="24dp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/extras">
+
+            <CheckBox
+                android:id="@+id/corn"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="Corn"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/cheese"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="Cheese"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/mushrooms"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="Mushrooms"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/olives"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="Olives"
+                android:visibility="visible" />
+
+            <CheckBox
+                android:id="@+id/tomato_sauce"
+                android:layout_width="135dp"
+                android:layout_height="30dp"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="Tomato sauce"
+                android:visibility="visible" />
+        </RadioGroup>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
